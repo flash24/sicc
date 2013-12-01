@@ -9,7 +9,7 @@
 <!--                  <li><a href="#">Mis Cursos</a></li>-->
                   <li><a href="#">Mis Cursos</a></li>
                    <li class="divider"></li>
-                  <li><a href="#">Cursos Abiertos</a></li>
+                  <li><a href="/sicc/datoscursos/view">Cursos Abiertos</a></li>
   
                 </ul>
               </li>

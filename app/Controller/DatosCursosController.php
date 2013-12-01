@@ -50,6 +50,10 @@ class DatosCursosController extends AppController {
                     $this->Session->setFlash(__('The datos curso could not be saved. Please, try again.'));
                 }
             }
+            $inscritos = $this->DatosCurso->CursosAbierto->Inscrito->find('list');
+            $datosCursos = $this->DatosCurso->CursosAbierto->DatosCurso->find('list');
+            $tipoCursos = $this->DatosCurso->CursosAbierto->TipoCurso->find('list');
+            $this->set(compact('inscritos', 'datosCursos', 'tipoCursos'));
         } else {
             return $this->redirect(array('controller' => 'inicio', 'action' => 'index'));
         }

@@ -1,6 +1,6 @@
 <div class="datosCursos index">
 	<h2><?php echo __('Datos Cursos'); ?></h2>
-	<table cellpadding="0" cellspacing="0">
+	<table class="table table-bordered" cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('nombre_curso'); ?></th>
@@ -18,7 +18,7 @@
 		<td><?php echo h($datosCurso['DatosCurso']['observaciones']); ?>&nbsp;</td>
 		<td><?php echo h($datosCurso['DatosCurso']['dirigido']); ?>&nbsp;</td>
 		<td><?php echo h($datosCurso['DatosCurso']['horas_totales']); ?>&nbsp;</td>
-		<td class="actions">
+		<td>
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $datosCurso['DatosCurso']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $datosCurso['DatosCurso']['id'])); ?>
 			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $datosCurso['DatosCurso']['id']), null, __('Are you sure you want to delete # %s?', $datosCurso['DatosCurso']['id'])); ?>
