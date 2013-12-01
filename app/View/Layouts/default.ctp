@@ -88,6 +88,12 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
                      
                </div>-->
             </div>
+            <div class="span8" >
+	<p ALIGN=justify>El departamento de Desarrollo Academico da la bienvenida a todos los docentes y personas
+            externos a nuestra Institución que deseen incribirse a algun curso de formación y actualización docente y
+            profesional ha hacer uso de este sistema que esta elaborado con el fin de automatizar el proceso de 
+            inscripción a cada curso.</p>
+	</div>
         </div>
 <!--      <div class="span10 offset3" id="cuerpo1">
             <div class="container">
