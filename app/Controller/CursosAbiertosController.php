@@ -37,21 +37,25 @@ class CursosAbiertosController extends AppController {
  *
  * @return void
  */
-	public function add() {
-		if ($this->request->is('post')) {
-			$this->CursosAbierto->create();
-			if ($this->CursosAbierto->save($this->request->data)) {
-				$this->Session->setFlash(__('The cursos abierto has been saved'));
-				$this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The cursos abierto could not be saved. Please, try again.'));
-			}
-		}
-		$inscritos = $this->CursosAbierto->Inscrito->find('list');
-		$datosCursos = $this->CursosAbierto->DatosCurso->find('list');
-		$tipoCursos = $this->CursosAbierto->TipoCurso->find('list');
-		$this->set(compact('inscritos', 'datosCursos', 'tipoCursos'));
-	}
+public function add() {
+        if ($this->Auth->user('role') == 'jefeDepa') {
+            if ($this->request->is('post')) {
+                $this->CursosAbierto->create();
+                if ($this->CursosAbierto->save($this->request->data)) {
+                    $this->Session->setFlash(__('The cursos abierto has been saved'));
+                    $this->redirect(array('action' => 'index'));
+                } else {
+                    $this->Session->setFlash(__('The cursos abierto could not be saved. Please, try again.'));
+                }
+            }
+            $inscritos = $this->CursosAbierto->Inscrito->find('list');
+            $datosCursos = $this->CursosAbierto->DatosCurso->find('list');
+            $tipoCursos = $this->CursosAbierto->TipoCurso->find('list');
+            $this->set(compact('inscritos', 'datosCursos', 'tipoCursos'));
+        } else {
+            return $this->redirect(array('controller' => 'inicio', 'action' => 'index'));
+        }
+    }
 
 /**
  * edit method
@@ -61,6 +65,7 @@ class CursosAbiertosController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+             if ($this->Auth->user('role') == 'jefeDepa') {
 		if (!$this->CursosAbierto->exists($id)) {
 			throw new NotFoundException(__('Invalid cursos abierto'));
 		}
@@ -79,6 +84,10 @@ class CursosAbiertosController extends AppController {
 		$datosCursos = $this->CursosAbierto->DatosCurso->find('list');
 		$tipoCursos = $this->CursosAbierto->TipoCurso->find('list');
 		$this->set(compact('inscritos', 'datosCursos', 'tipoCursos'));
+             }
+             else {
+            return $this->redirect(array('controller' => 'inicio', 'action' => 'index'));
+        }
 	}
 
 /**
@@ -89,6 +98,7 @@ class CursosAbiertosController extends AppController {
  * @return void
  */
 	public function delete($id = null) {
+             if ($this->Auth->user('role') == 'jefeDepa') {
 		$this->CursosAbierto->id = $id;
 		if (!$this->CursosAbierto->exists()) {
 			throw new NotFoundException(__('Invalid cursos abierto'));
@@ -100,5 +110,9 @@ class CursosAbiertosController extends AppController {
 		}
 		$this->Session->setFlash(__('Cursos abierto was not deleted'));
 		$this->redirect(array('action' => 'index'));
+             }
+             else {
+            return $this->redirect(array('controller' => 'inicio', 'action' => 'index'));
+        }
 	}
 }
