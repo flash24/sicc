@@ -63,7 +63,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
                       break;
 
                   case 'jefeDepa':
-                      echo $this->element('menu_coordinador');
+                      echo $this->element('menu_jefe');
                       break;
               }
               
@@ -103,7 +103,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
                 </div>
             </div>
         </div>-->
-<!--	<div class="span10 offset3" id="pie1">inicio pie 
+<!--<div class="span10 offset3" id="pie1">inicio pie 
         
 	</div>fin pie -->
     </div>
