@@ -18,7 +18,7 @@
                 <?php echo $this->Html->image('4.jpg', array('height' => '100', 'width' => '500')); ?>
             </div>
         </div>
-         <?php echo $usuario ?>
+       
         <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
         <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
     </div>

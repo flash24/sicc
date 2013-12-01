@@ -6,18 +6,12 @@ class InicioController extends AppController{
 	public $components=array('Session');
 
 	public function index(){
-            $hola=$this->Auth->user('id');
-            $this->set('usuario',$hola);
+            $this->Session->write('rol', $this->Auth->user('role'));
+//         $hola=$this->Auth->user('rol');
+//            $this->set('usuario',$hola);
 		
 	}
-	public function add(){
-		if($this->request->is('post')){
-			if($this->Maestro->save($this->request->data)){
-				$this->Session->setFlash('maestro guardado');
-				$this->redirect(array('action'=>'index'));
-			}
-		}
-	}
+	
 }
 
 

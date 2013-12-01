@@ -7,16 +7,21 @@
     <fieldset>
         <legend><?php echo __('Datos de Usuario'); ?></legend>
         <?php
-        
-        echo $this->Form->input('User.username',array('label'=>'Nombre De Usuario'));
-        echo $this->Form->input('User.password');
-        echo $this->Form->input('User.role',array(
-            'options' => array('jefeDepa' => 'Jefe De Departamento', 'participante' => 'Participante'),'label'=>'Permisos'
-        ));
-      
-
-       
-    ?>
+        if ($usuario == null || $usuario == false) {
+                echo $this->Form->input('User.username', array('label' => 'Nombre De Usuario'));
+                echo $this->Form->input('User.password');
+                echo $this->Form->input('User.role', array(
+                    'options' => array('participante' => 'Participante'), 'label' => 'Permisos'
+                ));
+            
+            } elseif ($usuario == true) {
+                echo $this->Form->input('User.username', array('label' => 'Nombre De Usuario'));
+                echo $this->Form->input('User.password');
+                echo $this->Form->input('User.role', array(
+                    'options' => array('jefeDepa' => 'Jefe De Departamento', 'participante' => 'Participante'), 'label' => 'Permisos'
+                ));
+            }
+            ?>
     </fieldset>
 
 </div>
@@ -33,7 +38,7 @@
         echo $this->Form->input('segundo_apellido');
         echo $this->Form->input('telefono');
         echo $this->Form->input('e-mail');
-        echo $this->Form->input('genero');
+        echo $this->Form->input('genero',array('options'=>array('F'=>'Femenino','M'=>'Masculino')));
         echo $this->Form->input('rfc');
         echo $this->Form->input('tipo_inscrito_id');
       

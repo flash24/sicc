@@ -38,18 +38,22 @@ class DatosCursosController extends AppController {
  * @return void
  */
 	public function add() {
-		if ($this->request->is('post')) {
-			$this->DatosCurso->create();
-			if ($this->DatosCurso->save($this->request->data)) {
-				$this->Session->setFlash(__('The datos curso has been saved'));
-				$this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The datos curso could not be saved. Please, try again.'));
-			}
-		}
-	}
+        if ($this->Auth->user('role') == 'jefeDepa') {
+            if ($this->request->is('post')) {
+                $this->DatosCurso->create();
+                if ($this->DatosCurso->save($this->request->data)) {
+                    $this->Session->setFlash(__('The datos curso has been saved'));
+                    $this->redirect(array('action' => 'index'));
+                } else {
+                    $this->Session->setFlash(__('The datos curso could not be saved. Please, try again.'));
+                }
+            }
+        }  else {
+             return $this->redirect(array('controller' => 'inicio', 'action' => 'index'));   
+        }
+    }
 
-/**
+    /**
  * edit method
  *
  * @throws NotFoundException

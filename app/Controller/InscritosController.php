@@ -46,6 +46,7 @@ class InscritosController extends AppController {
             if (!empty($this->request->data)) {
                 // Use the following to avoid validation errors:
                 unset($this->Inscrito->User->validate['inscrito_id']);
+                
                 if ($this->Inscrito->saveAssociated($this->request->data)) {
                     $this->Session->setFlash(__('The user has been saved'));
                     return $this->redirect(array('controller' => 'inicio', 'action' => 'index'));
@@ -56,6 +57,14 @@ class InscritosController extends AppController {
         }
         $tipoInscritos = $this->Inscrito->TipoInscrito->find('list');
         $this->set(compact('tipoInscritos'));
+        
+        if ($this->Auth->user('role') == 'jefeDepa') {
+            $usuario=true;
+        }else{
+             $usuario=false;
+        }
+        
+            $this->set('usuario',$usuario);
     }
 
     /**

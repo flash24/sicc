@@ -54,8 +54,29 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	</div><!--fin cabecera -->
 
         <div class="span10 offset3" id="menu">
-           
-          <?php echo $this->element('menu_login');?>
+         
+          <?php 
+          if($this->Session->check('rol')){
+              switch ($this->Session->read('rol')) {
+                  case 'participante':
+                      echo $this->element('menu_participante');
+                      break;
+
+                  case 'jefeDepa':
+                      echo $this->element('menu_coordinador');
+                      break;
+              }
+              
+          }
+          else{
+              
+              echo $this->element('menu_login');
+          }
+              
+          
+          
+          
+          ?>
 
         </div>
         <div class="span10 offset3" id="cuerpo1">
