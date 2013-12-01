@@ -1,7 +1,7 @@
  <ul class="nav nav-tabs">
               <li class="active"><a href="#">Inicio</a></li>
               <li><a href="#">Perfil</a></li>
-              <li><a href="users/logout">Salir</a></li>
+             
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Cursos <b class="caret"></b></a>
                 
@@ -13,4 +13,5 @@
   
                 </ul>
               </li>
+               <li><a href="users/logout">Salir</a></li>
             </ul>
