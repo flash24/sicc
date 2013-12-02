@@ -1,6 +1,6 @@
 <div class="cursosAbiertos index">
 	<h2><?php echo __('Cursos Abiertos'); ?></h2>
-	<table cellpadding="0" cellspacing="0">
+	<table class="table table-bordered" cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('inscrito_id'); ?></th>

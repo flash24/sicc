@@ -51,14 +51,14 @@ class DatosCursosController extends AppController {
                         $this->request->data['CursosAbierto']['datos_curso_id'] = $this->DatosCurso->id;// se obtiene el 'id' del curso recien insertado
                         if ($this->DatosCurso->CursosAbierto->save($this->request->data)) {// se salva los datos del modelo 'CursoAbierto'
                             $this->Session->setFlash(__('El Curso se ha guardado'));// Se envia un msj a la vista que se salvaron los cambios
-                            return $this->redirect(array('controller' => 'inicio', 'action' => 'index'));// redireciona
+                            return $this->redirect(array('action' => 'index'));// redireciona
                         } else {
                             $this->Session->setFlash(__('El Curso no se guardo. Please, try again.'));
                         }
                     }
                 }  
             }
-            $inscritos = $this->DatosCurso->CursosAbierto->Inscrito->find('list');
+            $inscritos = $this->DatosCurso->CursosAbierto->Inscrito->find('list');//se crea un lista con los datos de inscritos para mostrar el nombre en el campo 'inscrito_id'
             $datosCursos = $this->DatosCurso->CursosAbierto->DatosCurso->find('list');
             $tipoCursos = $this->DatosCurso->CursosAbierto->TipoCurso->find('list');
             $this->set(compact('inscritos', 'datosCursos', 'tipoCursos'));

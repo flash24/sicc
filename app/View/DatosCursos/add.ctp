@@ -11,7 +11,7 @@
 		echo $this->Form->input('objetivos');
 		echo $this->Form->input('observaciones');
 		echo $this->Form->input('dirigido');
-		echo $this->Form->input('horas_totales');
+		echo $this->Form->input('horas_totales',array('type'=>'number'));
 	?>
 	</fieldset>
 

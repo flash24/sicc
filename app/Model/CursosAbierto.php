@@ -11,7 +11,38 @@ class CursosAbierto extends AppModel {
 
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
-
+public $validate = array(
+		'id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+                'inscrito_id' => array(
+			'required' => array(
+				'rule' => array('notempty'),
+				'message' => 'El nombre del Instrucctor es requerido',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+              'tipo_curso_id' => array(
+			'required' => array(
+				'rule' => array('notempty'),
+				'message' => 'El tipo del curso es requerido',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+	);
 /**
  * belongsTo associations
  *
