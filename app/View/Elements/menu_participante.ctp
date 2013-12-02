@@ -1,5 +1,5 @@
  <ul class="nav nav-tabs">
-              <li class="active"><a href="#">Inicio</a></li>
+              <li><a href="#">Inicio</a></li>
               <li><a href="#">Perfil</a></li>
              
               <li class="dropdown">
