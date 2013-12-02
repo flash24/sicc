@@ -27,11 +27,13 @@ class DatosCursosController extends AppController {
      * @return void
      */
     public function view($id = null) {
+        if ($this->Auth->login()) {
         if (!$this->DatosCurso->exists($id)) {
             throw new NotFoundException(__('Invalid datos curso'));
         }
         $options = array('conditions' => array('DatosCurso.' . $this->DatosCurso->primaryKey => $id));
         $this->set('datosCurso', $this->DatosCurso->find('first', $options));
+        }
     }
 
     /**
