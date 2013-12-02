@@ -44,6 +44,7 @@ class AppController extends Controller {
         $this->Auth->allow('add');
     }
  public $components = array(
+     'DebugKit.Toolbar'=>array('enabled'=>true),
         'Session',
         'Auth' => array(
             'loginRedirect' => array('controller' => 'users', 'action' => 'login'),

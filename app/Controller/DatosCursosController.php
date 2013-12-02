@@ -40,15 +40,23 @@ class DatosCursosController extends AppController {
      * @return void
      */
     public function add() {
-        if ($this->Auth->user('role') == 'jefeDepa') {
-            if ($this->request->is('post')) {
-                $this->DatosCurso->create();
-                if ($this->DatosCurso->save($this->request->data)) {
-                    $this->Session->setFlash(__('The datos curso has been saved'));
-                    $this->redirect(array('action' => 'index'));
-                } else {
-                    $this->Session->setFlash(__('The datos curso could not be saved. Please, try again.'));
-                }
+        if ($this->Auth->user('role') == 'jefeDepa') {// Se checa el rol del usuario que se dio login
+
+            if ($this->request->is('post')) {// se checa si nos enviaron el formulario
+
+                if (!empty($this->request->data)) {// se verifica que hayan enviado datos
+
+                    $curso = $this->DatosCurso->save($this->request->data);// se salva primero los datos del modelo 'DatosCurso'
+                    if (!empty($curso)) {// si se logro salvar el modelo y no esta vacio entonses
+                        $this->request->data['CursosAbierto']['datos_curso_id'] = $this->DatosCurso->id;// se obtiene el 'id' del curso recien insertado
+                        if ($this->DatosCurso->CursosAbierto->save($this->request->data)) {// se salva los datos del modelo 'CursoAbierto'
+                            $this->Session->setFlash(__('El Curso se ha guardado'));// Se envia un msj a la vista que se salvaron los cambios
+                            return $this->redirect(array('controller' => 'inicio', 'action' => 'index'));// redireciona
+                        } else {
+                            $this->Session->setFlash(__('El Curso no se guardo. Please, try again.'));
+                        }
+                    }
+                }  
             }
             $inscritos = $this->DatosCurso->CursosAbierto->Inscrito->find('list');
             $datosCursos = $this->DatosCurso->CursosAbierto->DatosCurso->find('list');
