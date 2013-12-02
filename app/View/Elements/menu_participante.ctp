@@ -14,5 +14,6 @@
   
                 </ul>
               </li>
-               <li><a href="users/logout">Salir</a></li>
+               <li><?php echo $this->Html->link(__('Salir'), array('controller'=>'users','action' => 'logout')); ?></li>
+                  
             </ul>
