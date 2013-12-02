@@ -24,5 +24,12 @@
     </div>
         </div>
 </div>
+<div class="span10 offset1" >
+	<p ALIGN=justify>El departamento de Desarrollo Académico da la bienvenida a todos los docentes 
+            y personas externas a nuestra Institución que deseen inscribirse a algún curso de formación 
+            y actualización docente y profesional, hacer uso de este sistema que está elaborado con el fin
+            de automatizar el proceso de inscripción a cada curso y llevarla a cabo de manera sencilla.</p>
+	</div>
+
 
 

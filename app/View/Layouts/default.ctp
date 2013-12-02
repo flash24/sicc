@@ -48,12 +48,12 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <body>
     <div class="container-fluid">
         
-<div class="span10 offset3" id="cabecera1"><!--inicio cabecera --> 
+<div class="span10 offset4" id="cabecera1"><!--inicio cabecera --> 
         <?php echo $this->Html->image('itc.jpg', array('style' => 'float:right; margin:15px;')); ?> 	
 	    <h1>Intituto Tecnológico de Chetumal</h1><h1>Sistema de Control de Cursos</h1>		
 	</div><!--fin cabecera -->
 
-        <div class="span10 offset3" id="menu">
+        <div class="span10 offset4" id="menu">
          
           <?php 
           if($this->Session->check('rol')){
@@ -79,7 +79,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
           ?>
 
         </div>
-        <div class="span10 offset3" id="cuerpo1">
+        <div class="span10 offset4" id="cuerpo1">
             <div class="row-fluid">
                      <?php echo $this->Session->flash(); ?>
 
@@ -88,13 +88,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
                      
                </div>-->
             </div>
-            <div class="span8" >
-	<p ALIGN=justify>El departamento de Desarrollo Academico da la bienvenida a todos los docentes y personas
-            externos a nuestra Institución que deseen incribirse a algun curso de formación y actualización docente y
-            profesional ha hacer uso de este sistema que esta elaborado con el fin de automatizar el proceso de 
-            inscripción a cada curso.</p>
-	</div>
-        </div>
+      
 <!--      <div class="span10 offset3" id="cuerpo1">
             <div class="container">
                 <div class="row">
@@ -109,9 +103,15 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
                 </div>
             </div>
         </div>-->
-<!--<div class="span10 offset3" id="pie1">inicio pie 
-        
-	</div>fin pie -->
+
     </div>
+        </div>
+    <footer class="span10 offset4" id="footer">
+    
+        <p ALIGN=center>  <a style="color:#000D18;">Instituto Tecnológico de Chetumal<br />Av. Insurgentes No. 330, C.P. 77013, Col. David Gustavo Gtz.<br />Chetumal, Quintana Roo, comunicacion@itchetumal.edu.mx</a></p>
+            
+    </footer>
+             
 </body>
+
 </html>
