@@ -7,6 +7,7 @@ class InicioController extends AppController{
 
 	public function index(){
             $this->Session->write('rol', $this->Auth->user('role'));
+            $this->Session->write('inscrito_id', $this->Auth->user('inscrito_id'));
 //         $hola=$this->Auth->user('rol');
 //            $this->set('usuario',$hola);
 		

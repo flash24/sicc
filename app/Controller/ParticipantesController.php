@@ -37,14 +37,19 @@ class ParticipantesController extends AppController {
  *
  * @return void
  */
-	public function add() {
+	public function add($participante=null,$curso=null) {
 		if ($this->request->is('post')) {
 			$this->Participante->create();
+                        $this->request->data['Participante']['cursos_abierto_id']=$curso;
+                        $this->request->data['Participante']['inscrito_id']=$participante;
+                      
 			if ($this->Participante->save($this->request->data)) {
 				$this->Session->setFlash(__('The participante has been saved'));
+                              // pr($this->request->data);
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The participante could not be saved. Please, try again.'));
+				$this->Session->setFlash(__($participante.'The participante could not be saved. Please, try again.'.$curso));
+                                // pr($data);
 			}
 		}
 		$cursosAbiertos = $this->Participante->CursosAbierto->find('list');

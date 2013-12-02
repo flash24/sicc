@@ -1,9 +1,23 @@
+.portlet-title {
+display: block;
+float: none;
+width: 100%;
+padding: 10px 0px;
+margin-bottom: 10px;
+color: #fff;
+min-height: 25px;
+background: #4e4e4e;
+font-family: 'Titillium Web', sans-serif;
+font-size: 17px;
+font-weight: 600;
+}
 #prueba1{
     color: #0F1419;
     background-color: #3E81A8;
       
 }
 body{
+    font: 300 1em 'Open Sans', sans-serif;
     color: #0F1419;
     background-color: #3E81A8;
     height:50px; 
