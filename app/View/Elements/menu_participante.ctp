@@ -9,7 +9,8 @@
 <!--                  <li><a href="#">Mis Cursos</a></li>-->
                   <li><a href="#">Mis Cursos</a></li>
                    <li class="divider"></li>
-                  <li><a href="/sicc/datoscursos/view">Cursos Abiertos</a></li>
+                  <li><li><?php echo $this->Html->link(__('Cursos Abiertos'), array('controller'=>'cursos_abiertos','action' => 'index')); ?></li>
+                  
   
                 </ul>
               </li>

@@ -28,9 +28,9 @@
 		<td><?php echo h($cursosAbierto['CursosAbierto']['lugar']); ?>&nbsp;</td>
 		<td><?php echo h($cursosAbierto['CursosAbierto']['periodo_cursos']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $cursosAbierto['CursosAbierto']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $cursosAbierto['CursosAbierto']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $cursosAbierto['CursosAbierto']['id']), null, __('Are you sure you want to delete # %s?', $cursosAbierto['CursosAbierto']['id'])); ?>
+			<?php echo $this->Html->link(__('Detalles'), array('action' => 'view', $cursosAbierto['CursosAbierto']['id'])); ?>
+			<?php // echo $this->Html->link(__('Edit'), array('action' => 'edit', $cursosAbierto['CursosAbierto']['id'])); ?>
+			<?php // echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $cursosAbierto['CursosAbierto']['id']), null, __('Are you sure you want to delete # %s?', $cursosAbierto['CursosAbierto']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

@@ -38,36 +38,36 @@
 		<li><?php echo $this->Html->link(__('New Constancia'), array('controller' => 'constancias', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
-<div class="related">
-	<h3><?php echo __('Related Constancias'); ?></h3>
-	<?php if (!empty($participante['Constancia'])): ?>
+<!--<div class="related">
+	<h3><?php // echo __('Related Constancias'); ?></h3>
+	<?php // if (!empty($participante['Constancia'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
-		<th><?php echo __('Id'); ?></th>
-		<th><?php echo __('Participante Id'); ?></th>
-		<th><?php echo __('Tipo Constancia'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
+		<th><?php // echo __('Id'); ?></th>
+		<th><?php // echo __('Participante Id'); ?></th>
+		<th><?php // echo __('Tipo Constancia'); ?></th>
+		<th class="actions"><?php // echo __('Actions'); ?></th>
 	</tr>
 	<?php
-		$i = 0;
-		foreach ($participante['Constancia'] as $constancia): ?>
+//		$i = 0;
+//		foreach ($participante['Constancia'] as $constancia): ?>
 		<tr>
-			<td><?php echo $constancia['id']; ?></td>
-			<td><?php echo $constancia['participante_id']; ?></td>
-			<td><?php echo $constancia['tipo_constancia']; ?></td>
+			<td><?php // echo $constancia['id']; ?></td>
+			<td><?php // echo $constancia['participante_id']; ?></td>
+			<td><?php // echo $constancia['tipo_constancia']; ?></td>
 			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'constancias', 'action' => 'view', $constancia['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'constancias', 'action' => 'edit', $constancia['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'constancias', 'action' => 'delete', $constancia['id']), null, __('Are you sure you want to delete # %s?', $constancia['id'])); ?>
+				<?php // echo $this->Html->link(__('View'), array('controller' => 'constancias', 'action' => 'view', $constancia['id'])); ?>
+				<?php // echo $this->Html->link(__('Edit'), array('controller' => 'constancias', 'action' => 'edit', $constancia['id'])); ?>
+				<?php // echo $this->Form->postLink(__('Delete'), array('controller' => 'constancias', 'action' => 'delete', $constancia['id']), null, __('Are you sure you want to delete # %s?', $constancia['id'])); ?>
 			</td>
 		</tr>
-	<?php endforeach; ?>
+	<?php // endforeach; ?>
 	</table>
-<?php endif; ?>
+<?php // endif; ?>
 
 	<div class="actions">
 		<ul>
-			<li><?php echo $this->Html->link(__('New Constancia'), array('controller' => 'constancias', 'action' => 'add')); ?> </li>
+			<li><?php // echo $this->Html->link(__('New Constancia'), array('controller' => 'constancias', 'action' => 'add')); ?> </li>
 		</ul>
 	</div>
-</div>
+</div>-->

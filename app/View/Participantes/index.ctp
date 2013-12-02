@@ -1,6 +1,6 @@
 <div class="participantes index">
 	<h2><?php echo __('Participantes'); ?></h2>
-	<table cellpadding="0" cellspacing="0">
+	<table  class="table table-bordered" cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('cursos_abierto_id'); ?></th>
@@ -40,15 +40,15 @@
 	?>
 	</div>
 </div>
-<div class="actions">
+<!--<div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New Participante'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Cursos Abiertos'), array('controller' => 'cursos_abiertos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Cursos Abierto'), array('controller' => 'cursos_abiertos', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Inscritos'), array('controller' => 'inscritos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Inscrito'), array('controller' => 'inscritos', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Constancias'), array('controller' => 'constancias', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Constancia'), array('controller' => 'constancias', 'action' => 'add')); ?> </li>
+		<li><?php // echo $this->Html->link(__('New Participante'), array('action' => 'add')); ?></li>
+		<li><?php // echo $this->Html->link(__('List Cursos Abiertos'), array('controller' => 'cursos_abiertos', 'action' => 'index')); ?> </li>
+		<li><?php // echo $this->Html->link(__('New Cursos Abierto'), array('controller' => 'cursos_abiertos', 'action' => 'add')); ?> </li>
+		<li><?php // echo $this->Html->link(__('List Inscritos'), array('controller' => 'inscritos', 'action' => 'index')); ?> </li>
+		<li><?php // echo $this->Html->link(__('New Inscrito'), array('controller' => 'inscritos', 'action' => 'add')); ?> </li>
+		<li><?php // echo $this->Html->link(__('List Constancias'), array('controller' => 'constancias', 'action' => 'index')); ?> </li>
+		<li><?php // echo $this->Html->link(__('New Constancia'), array('controller' => 'constancias', 'action' => 'add')); ?> </li>
 	</ul>
-</div>
+</div>-->
